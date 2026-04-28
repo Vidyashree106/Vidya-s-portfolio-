@@ -429,3 +429,200 @@ footer {
 #contact {
     scroll-margin-top: 30vh;
 }
+
+
+/* Mobile phones */
+@media(max-width:480px) {
+    * {
+        scroll-behavior: smooth;
+    }
+
+    #container {
+        grid-template-rows: auto auto 8vh;
+        grid-template-areas:
+            "head"
+            "main"
+            "footer";
+    }
+
+    header {
+        padding: 2vh 0;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        margin: 2vh 0;
+        row-gap: 1vh;
+    }
+
+    header li {
+        padding: 0.5vh 0;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin: 2vh 0;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin: 1vh 0;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+        margin: 5vh 0;
+        padding: 0 3vw;
+    }
+
+    .main img {
+        height: 200px;
+        width: 200px;
+        border: solid 2px white;
+        margin-bottom: 3vh;
+    }
+
+    .main li {
+        padding: 1vh 0;
+    }
+
+    .main button {
+        padding: 1vh 2vw;
+        font-size: 13px;
+        margin: 1vh 0;
+        width: 90%;
+    }
+
+    .divider {
+        height: 0.5vh;
+    }
+
+    .about {
+        margin: 10vh 0;
+        padding: 0 2vw;
+    }
+
+    .about p {
+        margin: 0 auto;
+        padding: 2vh 3vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .Education,
+    .skills,
+    .projects,
+    .certification {
+        margin: 10vh 0;
+        padding: 0 2vw;
+    }
+
+    .Education ul,
+    .skills ul {
+        grid-template-columns: auto;
+        row-gap: 3vh;
+        margin: 3vh 0;
+    }
+
+    .Education li,
+    .skills li {
+        padding: 2.5vh 3vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .certification ul {
+        grid-template-columns: auto;
+        row-gap: 3vh;
+        margin: 3vh 0;
+    }
+
+    .certification li {
+        padding: 2.5vh 3vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .projects ul {
+        row-gap: 3vh;
+        margin: 3vh 0;
+    }
+
+    .projects li {
+        padding: 2.5vh 3vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .projects button {
+        height: 40px;
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .skills img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .getdetails #contact {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .getdetails ul {
+        margin: 3vh 2vw;
+        padding: 2vh 2vw;
+        row-gap: 1.5vh;
+        border-radius: 15px;
+    }
+
+    .getdetails img {
+        height: 25px;
+        width: 25px;
+    }
+
+    .getdetails h4 {
+        font-size: 11px;
+    }
+
+    .getdetails button {
+        height: 40px;
+        width: 100%;
+        font-size: 12px;
+        margin-top: 2vh;
+    }
+
+    .getdetails .sp,
+    .getdetails .sp1 {
+        margin: 0 1vw;
+    }
+
+    footer {
+        padding: 1vh 0;
+    }
+
+    footer p {
+        font-size: 11px;
+        margin: 2vh 0;
+    }
+}
