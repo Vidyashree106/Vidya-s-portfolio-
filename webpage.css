@@ -5,6 +5,10 @@
     box-sizing: border-box;
 
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 
 .divider {
     height: 1vh;
@@ -16,14 +20,12 @@
 #container {
     background: black;
     display: grid;
-    grid-template-columns: auto;
     grid-template-areas:
         "head head"
         "main main"
         "footer footer";
-    grid-template-rows: 20vh 800vh 25vh;
+    grid-template-rows: 20vh 680vh 7vh;
 }
-
 
 header {
     background: black;
@@ -40,16 +42,12 @@ header {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin: 5vh 0;
+        margin: 3vh 0;
     }
 
     li {
         list-style: none;
         transition: all 1s;
-    }
-
-    li:hover {
-        transform: scale(1.1);
     }
 
     a {
@@ -58,7 +56,6 @@ header {
         color: gainsboro;
         font-weight: 100;
     }
-
     a:hover {
         text-decoration: underline;
         color: white;
@@ -72,26 +69,19 @@ h1 {
     font-size: 40px;
 }
 
-
-
 .main {
     grid-area: main;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 100px;
 
-    img {        border-radius: 50%;
-        height: 500px;
-        width: 100%;
-        max-width: 500px;
+    img {
+        border-radius: 50%;
+        height: 400px;
+        max-width: 400px;
         border: solid 5px white;
-        box-shadow: 3px 3px 100px rgb(156, 7, 205);
         transition: all 1s;
-    }
-
-    img:hover {
-        transform: scale(1.1);
         box-shadow: 3px 3px 500px rgb(156, 7, 205);
     }
 
@@ -106,12 +96,12 @@ h1 {
         width: 30px;
         border: none;
         border-radius: 0px;
-        margin: 0 .5vw;
+        margin: 0 1vw;
     }
 
     li {
         list-style: none;
-        margin: 1vh 0;
+        margin: 2vh 0;
     }
 
     p {
@@ -122,26 +112,10 @@ h1 {
         font-family: sans-serif;
     }
 
-    button {
-        padding: 2vh 3vw;
-        border-radius: 30px;
-        margin: 10px;
-        background: radial-gradient(rgb(156, 7, 205), black);
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        transition: all 1s;
-    }
-
-    button:hover {
-        transform: scale(1.1);
-    }
 }
 
-
 .about {
-    margin: 30vh 0;
-
+     margin-top: 10vh;
     h1 {
         text-align: center;
         font-size: 40px;
@@ -149,9 +123,7 @@ h1 {
 
     #about {
         margin-top: 10vh;
-        margin-bottom: 5vh;
     }
-
     p {
         text-align: center;
         text-align: justify;
@@ -162,10 +134,8 @@ h1 {
         font-size: 19px;
         margin: 0 20vw;
         transition: all 0.5s;
-        cursor: pointer;
         font-family: sans-serif;
     }
-
     p:hover {
         transform: scale(1.1);
         background: rgb(156, 7, 205);
@@ -173,7 +143,7 @@ h1 {
 }
 
 .Education {
-    margin: 30vh 0;
+    margin: 15vh 0;
 
     h1 {
         text-align: center;
@@ -182,8 +152,6 @@ h1 {
 
     #educ {
         margin-top: 10vh;
-        margin-bottom: 10vh;
-
     }
 
     ul {
@@ -237,10 +205,12 @@ h3 {
 }
 
 .skills {
-    margin: 30vh 0;
-    h2{
+    margin: 15vh 0;
+
+    h2 {
         font-family: sans-serif;
     }
+
     h1 {
         text-align: center;
     }
@@ -258,7 +228,7 @@ h3 {
     ul {
         display: grid;
         justify-content: space-evenly;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(4,auto);
         list-style: none;
         row-gap: 5vh;
     }
@@ -279,7 +249,7 @@ h3 {
 }
 
 .projects {
-    margin: 30vh 0;
+    margin: 15vh 0;
 
     h1 {
         text-align: center;
@@ -311,7 +281,10 @@ h3 {
         transform: scale(1.1);
         background: rgb(156, 7, 205);
     }
-
+    img{
+        height:200px;
+        width:200px;
+    }
     button {
         height: 50px;
         width: 30%;
@@ -325,7 +298,7 @@ h3 {
 
 
 .certification {
-    margin: 30vh 0;
+    margin: 15vh 0;
 
     h1 {
         text-align: center;
@@ -364,7 +337,6 @@ h3 {
 .getdetails {
     #contact {
         margin-top: 10vh;
-        margin-bottom: 10vh;
     }
 
     h1,
@@ -408,8 +380,26 @@ h3 {
         margin: 0 auto;
     }
 
-    button {
-        height: 50px;
+    .sp,
+    .sp1 {
+        margin: 0 2vw;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-family:sans-serif;
+    }
+    .me{
+         border: solid 2px white;
+         padding: 2vh 2vw;
+         border-radius: 30px;
+         box-shadow: inset 0 0 100px black;
+    }
+
+}
+ button{
+        height: 60px;
         width: 200px;
         font-weight: bold;
         border-radius: 10px;
@@ -419,33 +409,14 @@ h3 {
         color: white;
     }
 
-    button:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-    }
-
-    .sp,
-    .sp1 {
-        margin: 0 2vw;
-        transition: all 1s;
-    }
-
-    .sp:hover {
-        transform: scale(1.1);
-    }
-
-}
-
 footer {
     grid-area: footer;
-    margin-top: 10vh;
 
     p {
         text-align: center;
-        margin: 5vh 0;
-        font-size: 19px;
+        font-size: 15px;
         color: white;
-        padding-bottom: 3vh;
+        padding: 2vh 0;
     }
 }
 
@@ -455,6 +426,6 @@ footer {
 #skills,
 #project,
 #cert,
-#contact{
-    scroll-margin-top: 200px;
+#contact {
+    scroll-margin-top: 30vh;
 }
