@@ -3,6 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+
 }
 
 .divider {
@@ -23,13 +24,16 @@
     grid-template-rows: 20vh 800vh 25vh;
 }
 
+
 header {
     background: black;
     grid-area: head;
     border: none;
+    position: sticky;
+    top: 0;
 
-    h1 {
-        margin-right: 20vw;
+    .p {
+        font-family: sans-serif;
     }
 
     ul {
@@ -58,6 +62,7 @@ header {
     a:hover {
         text-decoration: underline;
         color: white;
+        font-family: sans-serif;
     }
 }
 
@@ -74,12 +79,12 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 15vh 0;
+    padding-top: 150px;
 
-    img {
-        border-radius: 50%;
+    img {        border-radius: 50%;
         height: 500px;
-        width: 500px;
+        width: 100%;
+        max-width: 500px;
         border: solid 5px white;
         box-shadow: 3px 3px 100px rgb(156, 7, 205);
         transition: all 1s;
@@ -90,30 +95,46 @@ h1 {
         box-shadow: 3px 3px 500px rgb(156, 7, 205);
     }
 
-    li {
-        list-style: none;
-        padding: 2vh 0;
-        transition: all 1s;
+    ul {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto;
     }
 
-    li:hover {
-        transform: scale(1.1);
+    .siz {
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 0px;
+        margin: 0 .5vw;
+    }
+
+    li {
+        list-style: none;
+        margin: 1vh 0;
     }
 
     p {
+        display: inline;
         font-size: 20px;
         text-align: center;
         color: gray;
+        font-family: sans-serif;
     }
 
     button {
         padding: 2vh 3vw;
-        border-radius: 10px;
-        margin: 0 5vw;
+        border-radius: 30px;
+        margin: 10px;
         background: radial-gradient(rgb(156, 7, 205), black);
         font-size: 20px;
         font-weight: bold;
         color: white;
+        transition: all 1s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
     }
 }
 
@@ -142,6 +163,7 @@ h1 {
         margin: 0 20vw;
         transition: all 0.5s;
         cursor: pointer;
+        font-family: sans-serif;
     }
 
     p:hover {
@@ -174,8 +196,6 @@ h1 {
         list-style: none;
     }
 
-    ;
-
     li {
         border: solid 3px white;
         padding: 5vh 5vw;
@@ -194,6 +214,7 @@ h1 {
 p {
     color: gainsboro;
     font-size: 17px;
+    font-family: sans-serif;
 }
 
 h2 {
@@ -205,17 +226,21 @@ h4 {
     color: gainsboro;
     font-size: 17px;
     font-weight: 100;
+    font-family: sans-serif;
 }
 
 h3 {
     color: gainsboro;
-    font-style: 17px;
+    font-size: 17px;
     font-weight: 100;
+    font-family: sans-serif;
 }
 
 .skills {
     margin: 30vh 0;
-
+    h2{
+        font-family: sans-serif;
+    }
     h1 {
         text-align: center;
     }
@@ -422,4 +447,14 @@ footer {
         color: white;
         padding-bottom: 3vh;
     }
+}
+
+
+#about,
+#educ,
+#skills,
+#project,
+#cert,
+#contact{
+    scroll-margin-top: 200px;
 }
