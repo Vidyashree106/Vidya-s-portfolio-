@@ -586,12 +586,11 @@ footer {
 
     .getdetails #contact {
         margin-top: 5vh;
-        margin-bottom: 5vh;
     }
 
     .getdetails ul {
         margin: 3vh 2vw;
-        padding: 2vh 2vw;
+        padding: 2vh 5vw;
         row-gap: 1.5vh;
         border-radius: 15px;
     }
