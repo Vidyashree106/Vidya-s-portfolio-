@@ -24,14 +24,15 @@ body{
         "head head"
         "main main"
         "footer footer";
-    grid-template-rows: 20vh 640vh 7vh;
+    grid-template-rows: 20vh 630vh 7vh;
 }
 
 header {
     background: black;
     grid-area: head;
     border: none;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
 
     .p {
@@ -74,7 +75,8 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 200px;
+
 
     img {
         border-radius: 50%;
