@@ -24,7 +24,7 @@ body{
         "head head"
         "main main"
         "footer footer";
-    grid-template-rows: 20vh 630vh 7vh;
+    grid-template-rows: 20vh 680vh 7vh;
 }
 
 header {
@@ -440,7 +440,7 @@ footer {
     }
 
     #container {
-        grid-template-rows: auto auto 8vh;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas:
             "head"
             "main"
@@ -448,27 +448,38 @@ footer {
     }
 
     header {
-        padding: 2vh 0;
+        position: static;
+        padding: 1vh 0;
+        width: 100%;
+        z-index: 100;
     }
 
     header ul {
         display: flex;
         flex-direction: column;
-        margin: 2vh 0;
-        row-gap: 1vh;
+        margin: 1vh 0;
+        row-gap: 0.5vh;
+        align-items: center;
     }
 
     header li {
         padding: 0.5vh 0;
     }
 
+    header li h1 {
+        font-size: 18px;
+        margin: 1vh 0;
+        line-height: 1.2;
+    }
+
     header a {
         font-size: 14px;
+        padding: 0.5vh 0.5vw;
     }
 
     h1 {
         font-size: 22px;
-        margin: 2vh 0;
+        margin: 1vh 0;
     }
 
     h2 {
@@ -492,26 +503,40 @@ footer {
     .main {
         flex-direction: column;
         text-align: center;
-        margin: 5vh 0;
-        padding: 0 3vw;
+        margin: 0;
+        padding: 1vh 2vw;
+        padding-top: 0;
+        justify-content: flex-start;
     }
 
     .main img {
-        height: 200px;
-        width: 200px;
+        height: 180px;
+        width: 180px;
         border: solid 2px white;
-        margin-bottom: 3vh;
+        margin: 2vh auto;
+    }
+
+    .main ul {
+        width: 100%;
     }
 
     .main li {
-        padding: 1vh 0;
+        padding: 0.5vh 0;
+        margin: 1vh 0;
     }
 
     .main button {
-        padding: 1vh 2vw;
+        padding: 0.8vh 2vw;
         font-size: 13px;
-        margin: 1vh 0;
-        width: 90%;
+        margin: 0.5vh 0;
+        width: 85%;
+        height: 40px;
+    }
+
+    .main .siz {
+        height: 25px;
+        width: 25px;
+        margin: 0 0.5vw;
     }
 
     .divider {
@@ -519,65 +544,64 @@ footer {
     }
 
     .about {
-        margin: 10vh 0;
-        padding: 0 2vw;
+        margin: 2vh 0;
+        padding: 0 1vw;
+    }
+
+    .about h1 {
+        font-size: 20px;
+        margin: 1vh 0;
     }
 
     .about p {
-        margin: 0 auto;
-        padding: 2vh 3vw;
+        margin: 1vh auto;
+        padding: 1.5vh 2vw;
+        border-radius: 15px;
+        font-size: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Education {
+        margin: 2vh 0;
+        padding: 0 1vw;
+    }
+
+    .Education h1 {
+        font-size: 20px;
+    }
+
+    .Education ul {
+        grid-template-columns: 1fr;
+        row-gap: 2vh;
+        margin: 2vh 0;
+    }
+
+    .Education li {
+        padding: 1.5vh 2vw;
         border-radius: 15px;
         font-size: 12px;
     }
 
-    .Education,
-    .skills,
-    .projects,
-    .certification {
-        margin: 10vh 0;
-        padding: 0 2vw;
+    .skills {
+        margin: 2vh 0;
+        padding: 0 1vw;
     }
 
-    .Education ul,
+    .skills h1 {
+        font-size: 20px;
+    }
+
     .skills ul {
-        grid-template-columns: auto;
-        row-gap: 3vh;
-        margin: 3vh 0;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2vh;
+        column-gap: 1vh;
+        margin: 2vh 0;
     }
 
-    .Education li,
     .skills li {
-        padding: 2.5vh 3vw;
+        padding: 1.5vh 2vw;
         border-radius: 15px;
-        font-size: 12px;
-    }
-
-    .certification ul {
-        grid-template-columns: auto;
-        row-gap: 3vh;
-        margin: 3vh 0;
-    }
-
-    .certification li {
-        padding: 2.5vh 3vw;
-        border-radius: 15px;
-        font-size: 12px;
-    }
-
-    .projects ul {
-        row-gap: 3vh;
-        margin: 3vh 0;
-    }
-
-    .projects li {
-        padding: 2.5vh 3vw;
-        border-radius: 15px;
-        font-size: 12px;
-    }
-
-    .projects button {
-        height: 40px;
-        width: 70%;
         font-size: 12px;
     }
 
@@ -586,20 +610,94 @@ footer {
         width: 40px;
     }
 
+    .projects {
+        margin: 2vh 0;
+        padding: 0 1vw;
+    }
+
+    .projects h1 {
+        font-size: 20px;
+    }
+
+    .projects ul {
+        row-gap: 2vh;
+        margin: 2vh 0;
+    }
+
+    .projects li {
+        padding: 1.5vh 2vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .projects img {
+        height: 120px;
+        width: 120px;
+        margin: 0.5vh 0;
+    }
+
+    .projects button {
+        height: 40px;
+        width: 80%;
+        font-size: 12px;
+        margin: 1vh 0;
+    }
+
+    .certification {
+        margin: 2vh 0;
+        padding: 0 1vw;
+    }
+
+    .certification h1 {
+        font-size: 20px;
+    }
+
+    .certification ul {
+        grid-template-columns: 1fr;
+        row-gap: 2vh;
+        margin: 2vh 0;
+    }
+
+    .certification li {
+        padding: 1.5vh 2vw;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .getdetails {
+        margin: 2vh 0;
+        padding: 0 1vw;
+    }
+
+    .getdetails h1 {
+        font-size: 20px;
+    }
+
     .getdetails #contact {
-        margin-top: 5vh;
+        margin-top: 1vh;
     }
 
     .getdetails ul {
-        margin: 3vh 2vw;
-        padding: 2vh 5vw;
-        row-gap: 1.5vh;
+        margin: 2vh auto;
+        padding: 1.5vh 2vw;
+        row-gap: 1vh;
         border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .getdetails li {
+        padding: 0.8vh 0;
     }
 
     .getdetails img {
         height: 25px;
         width: 25px;
+        margin: 0 0.5vw;
+    }
+
+    .getdetails h3 {
+        font-size: 13px;
     }
 
     .getdetails h4 {
@@ -610,12 +708,16 @@ footer {
         height: 40px;
         width: 100%;
         font-size: 12px;
-        margin-top: 2vh;
+        margin: 1vh 0;
     }
 
     .getdetails .sp,
     .getdetails .sp1 {
-        margin: 0 1vw;
+        margin: 0 0.5vw;
+    }
+
+    .getdetails .me {
+        padding: 1vh 1.5vw;
     }
 
     footer {
@@ -624,6 +726,22 @@ footer {
 
     footer p {
         font-size: 11px;
-        margin: 2vh 0;
+        margin: 1vh 0;
+    }
+
+    /* Disable hover transforms on mobile */
+    .about p:hover {
+        transform: none;
+    }
+
+    .Education li:hover,
+    .skills li:hover,
+    .projects li:hover,
+    .certification li:hover {
+        transform: none;
+    }
+
+    .getdetails ul:hover {
+        transform: none;
     }
 }
